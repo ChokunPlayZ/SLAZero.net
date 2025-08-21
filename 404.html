@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | SLAZero.net</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="error-page" style="background: var(--gradient-bg);">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Page Not Found</h2>
+            <p>Probably because our servers are down... again. 🤦‍♂️</p>
+            <p>Don't worry, this is completely normal for us!</p>
+            <a href="index.html" class="error-btn">Back to Broken Homepage</a>
+            
+            <div style="margin-top: 2rem; opacity: 0.7;">
+                <p><small>Error details: The hamster powering our server took a coffee break.</small></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Error page translations
+        const errorTranslations = {
+            en: {
+                title: "Page Not Found",
+                message: "Probably because our servers are down... again. 🤦‍♂️",
+                subMessage: "Don't worry, this is completely normal for us!",
+                button: "Back to Broken Homepage",
+                details: "Error details: The hamster powering our server took a coffee break."
+            },
+            th: {
+                title: "ไม่พบหน้า",
+                message: "น่าจะเพราะเซิร์ฟเวอร์เราล่ม... อีกครั้ง 🤦‍♂️", 
+                subMessage: "ไม่ต้องกังวล นี่เป็นเรื่องปกติสำหรับเรา!",
+                button: "กลับไปหน้าแรกที่พัง",
+                details: "รายละเอียดข้อผิดพลาด: แฮมสเตอร์ที่ขับเคลื่อนเซิร์ฟเวอร์ไปพักดื่มกาแฟ"
+            },
+            ja: {
+                title: "ページが見つかりません",
+                message: "おそらくサーバーがダウンしているから...また。🤦‍♂️",
+                subMessage: "心配しないで、これは私たちには完全に正常です！",
+                button: "壊れたホームページに戻る", 
+                details: "エラー詳細: サーバーを動かしているハムスターがコーヒーブレイクを取りました。"
+            }
+        };
+        
+        // Apply saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Apply saved language
+        const savedLang = localStorage.getItem('language') || 'en';
+        const translation = errorTranslations[savedLang];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.error-content h2').textContent = translation.title;
+            document.querySelector('.error-content p').textContent = translation.message;
+            document.querySelector('.error-content p:nth-child(4)').textContent = translation.subMessage;
+            document.querySelector('.error-btn').textContent = translation.button;
+            document.querySelector('small').textContent = translation.details;
+        });
+        
+        // Add some chaos to the 404 page
+        setTimeout(() => {
+            if (Math.random() < 0.5) {
+                const alternatives = {
+                    en: "Page Found! Just Kidding, Still Lost",
+                    th: "เจอหน้าแล้ว! แค่ล้อเล่น ยังหายอยู่",
+                    ja: "ページが見つかった！冗談です、まだ迷子です"
+                };
+                document.querySelector('.error-content h2').textContent = alternatives[savedLang];
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

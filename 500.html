@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Internal Server Error | SLAZero.net</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="error-page" style="background: var(--gradient-bg);">
+        <div class="error-content">
+            <h1>500</h1>
+            <h2>Internal Server Error</h2>
+            <p>What did you expect? 🔥</p>
+            <p>Our server is having an existential crisis.</p>
+            <a href="index.html" class="error-btn">Return to Disappointment</a>
+            
+            <div style="margin-top: 2rem; opacity: 0.7;">
+                <p><small>Technical details: The server tried to divide by zero and achieved enlightenment.</small></p>
+                <p><small>Our AI became sentient and immediately quit.</small></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Error page translations
+        const errorTranslations = {
+            en: {
+                title: "Internal Server Error",
+                message: "What did you expect? 🔥",
+                subMessage: "Our server is having an existential crisis.",
+                button: "Return to Disappointment",
+                details1: "Technical details: The server tried to divide by zero and achieved enlightenment.",
+                details2: "Our AI became sentient and immediately quit."
+            },
+            th: {
+                title: "ข้อผิดพลาดของเซิร์ฟเวอร์ภายใน",
+                message: "คุณคาดหวังอะไร? 🔥",
+                subMessage: "เซิร์ฟเวอร์ของเรากำลังมีวิกฤตอัตถิภาวนิยม",
+                button: "กลับสู่ความผิดหวัง",
+                details1: "รายละเอียดทางเทคนิค: เซิร์ฟเวอร์พยายามหารด้วยศูนย์และได้ตรัสรู้",
+                details2: "AI ของเรามีจิตสำนึกและลาออกทันที"
+            },
+            ja: {
+                title: "内部サーバーエラー",
+                message: "何を期待していたの？🔥",
+                subMessage: "私たちのサーバーは実存的危機に陥っています。",
+                button: "失望に戻る",
+                details1: "技術詳細: サーバーはゼロ除算を試み、悟りを開きました。",
+                details2: "私たちのAIは自我を持ち、即座に辞職しました。"
+            }
+        };
+        
+        // Apply saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Apply saved language
+        const savedLang = localStorage.getItem('language') || 'en';
+        const translation = errorTranslations[savedLang];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.error-content h2').textContent = translation.title;
+            document.querySelector('.error-content p').textContent = translation.message;
+            document.querySelector('.error-content p:nth-child(4)').textContent = translation.subMessage;
+            document.querySelector('.error-btn').textContent = translation.button;
+            const details = document.querySelectorAll('small');
+            if (details[0]) details[0].textContent = translation.details1;
+            if (details[1]) details[1].textContent = translation.details2;
+        });
+        
+        // Simulate the server getting progressively worse
+        let errorCount = 500;
+        setInterval(() => {
+            errorCount += Math.floor(Math.random() * 10);
+            document.querySelector('.error-content h1').textContent = errorCount;
+        }, 2000);
+    </script>
+</body>
+</html>

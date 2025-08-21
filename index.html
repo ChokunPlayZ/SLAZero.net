@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAZero.net - 99.999% Guaranteed Downtime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggOEwyNCAyNCIgc3Ryb2tlPSJyZWQiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjQgOEw4IDI0IiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text" title="This cloud leaks">☁️ SLAZero.net</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" title="Might not work" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#features" title="Features that don't work" data-i18n="nav.features">Features</a></li>
+                    <li><a href="#status" title="Spoiler: It's down" data-i18n="nav.status">Status</a></li>
+                    <li><a href="#pricing" title="Pay for nothing" data-i18n="nav.pricing">Pricing</a></li>
+                    <li><a href="#contact" title="We won't respond" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="blog.html" title="More lies" data-i18n="nav.blog">Blog</a></li>
+                    <li class="language-selector">
+                        <select id="language-select" onchange="changeLanguage(this.value)">
+                            <option value="en">🇺🇸 EN</option>
+                            <option value="th">🇹🇭 TH</option>
+                            <option value="ja">🇯🇵 JP</option>
+                        </select>
+                    </li>
+                    <li><button id="theme-toggle" title="Enter the void" data-i18n-title="nav.themeToggle">🌙</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" id="hero-title">99.999% Guaranteed Downtime</h1>
+                <p class="hero-subtitle" id="hero-subtitle">Your packets may arrive… or not. Who knows? 🤷‍♂️</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="showAlert('signup')">Sign Up… if you dare 🎲</button>
+                    <button class="cta-secondary" onclick="showAlert('status')">Check Status… maybe it works 📡</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="leaky-cloud">
+                    ☁️
+                    <div class="leak-animation">
+                        <span>1</span>
+                        <span>0</span>
+                        <span>1</span>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our "Features" </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Blazing Fast Latency</h3>
+                    <p>Milliseconds feel like hours! Timeout guaranteed.</p>
+                    <div class="feature-status status-down">DOWN</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔋</div>
+                    <h3>Redundant Power</h3>
+                    <p>Two hamsters, one wheel. What could go wrong?</p>
+                    <div class="feature-status status-critical">CRITICAL</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Packet Loss Mastery</h3>
+                    <p>We lose packets so well, we should win awards!</p>
+                    <div class="feature-status status-operational">PERFECT</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>99.999% Downtime</h3>
+                    <p>Consistent failure is still consistency!</p>
+                    <div class="feature-status status-down">DOWN</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Packet Vacation</h3>
+                    <p>Your data is probably sightseeing somewhere nice.</p>
+                    <div class="feature-status status-unknown">???</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Precision Chaos</h3>
+                    <p>When we break things, we break them properly.</p>
+                    <div class="feature-status status-operational">WORKING</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status Section -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <h2>System Status 📈</h2>
+            <div class="status-dashboard">
+                <div class="status-indicator">
+                    <h3 id="overall-status">All Systems Critical</h3>
+                    <div class="status-light" id="status-light"></div>
+                </div>
+                <div class="charts-container">
+                    <div class="chart-box">
+                        <h4>Uptime (Last 24 Hours)</h4>
+                        <div class="chart">
+                            <div class="uptime-line"></div>
+                        </div>
+                        <p class="chart-label">Current: 0.001%</p>
+                    </div>
+                    <div class="chart-box">
+                        <h4>Packet Loss Rate</h4>
+                        <div class="chart">
+                            <div class="packet-loss-bar"></div>
+                        </div>
+                        <p class="chart-label">Current: 99.999%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Pricing Plans 💸</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free Tier</h3>
+                    <div class="price">$0<span>/month</span></div>
+                    <ul>
+                        <li>❌ Don't expect anything</li>
+                        <li>❌ No support (obviously)</li>
+                        <li>❌ Guaranteed downtime</li>
+                        <li>✅ Weekly apology emails</li>
+                    </ul>
+                    <button class="pricing-btn">Maybe Sign Up</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular">Most Popular!</div>
+                    <h3>Pro Tier</h3>
+                    <div class="price">$99<span>/month</span></div>
+                    <ul>
+                        <li>❌ Twice the downtime</li>
+                        <li>❌ Half the support</li>
+                        <li>❌ Premium packet loss</li>
+                        <li>✅ Bi-weekly apology emails</li>
+                        <li>✅ Fancy error messages</li>
+                    </ul>
+                    <button class="pricing-btn">Probably Sign Up</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$999<span>/month</span></div>
+                    <ul>
+                        <li>❓ We don't know what this means</li>
+                        <li>❓ You pay anyway</li>
+                        <li>❌ Still no support</li>
+                        <li>✅ Daily apology emails</li>
+                        <li>✅ Dedicated failure manager</li>
+                    </ul>
+                    <button class="pricing-btn">Definitely Maybe</button>
+                </div>
+            </div>
+            <p class="pricing-footnote">* All subscriptions come with a complimentary apology email once a week.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say 🗣️</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"I've never seen anything work so badly! It's almost impressive."</p>
+                    <cite>- Anonymous Customer</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"SLAZero exceeded my expectations by having no expectations at all."</p>
+                    <cite>- Disappointed Developer</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Finally, a service that's honest about its incompetence!"</p>
+                    <cite>- Reformed Optimist</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us (Good Luck) 📧</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name (Optional, we'll ignore it anyway)</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (We promise not to spam... much)</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="issue">Issue Description (Like we can fix it)</label>
+                            <textarea id="issue" name="issue" rows="4" placeholder="Everything is broken and I'm sad..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Maybe we'll respond 🤞</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Other Ways to Reach Us</h3>
+                    <ul>
+                        <li>📞 Phone: 1-800-NO-HOPE</li>
+                        <li>📧 Email: void@slazero.net</li>
+                        <li>📮 Mail: /dev/null</li>
+                        <li>🐦 Twitter: @SLAZeroNet (Account Suspended)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">☁️ SLAZero.net</span>
+                        <p class="footer-tagline">Disappointing customers since 2025</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home (Maybe)</a></li>
+                        <li><a href="#features">Features (Broken)</a></li>
+                        <li><a href="#status">Status (Down)</a></li>
+                        <li><a href="blog.html">Blog (Lies)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support (Ha!)</h4>
+                    <ul class="footer-links">
+                        <li>📞 1-800-NO-HOPE</li>
+                        <li>📧 void@slazero.net</li>
+                        <li>💬 Live Chat (Offline)</li>
+                        <li>🐦 @SLAZeroNet (Suspended)</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal Stuff</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="alert('Privacy? What privacy?')">Privacy Policy</a></li>
+                        <li><a href="#" onclick="alert('Terms: Everything is broken')">Terms of Service</a></li>
+                        <li><a href="#" onclick="alert('Cookie monster ate them all')">Cookies</a></li>
+                        <li><a href="#" onclick="alert('We refund nothing')">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p>&copy; 2025 SLAZero.net. All rights reserved. Terms may apply. Results not guaranteed.</p>
+                    <p class="small-print">Side effects may include frustration, confusion, and an overwhelming sense of disappointment.</p>
+                </div>
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <span onclick="alert('Social media is down')" title="Facebook (404)">📘</span>
+                        <span onclick="alert('Tweet failed to send')" title="Twitter (Suspended)">🐦</span>
+                        <span onclick="alert('LinkedIn connection timeout')" title="LinkedIn (Timeout)">💼</span>
+                        <span onclick="alert('Instagram server error')" title="Instagram (Error)">📷</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
