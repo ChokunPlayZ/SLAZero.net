@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://slazero.net/sitemap.xml
+
+# Allow crawling of CSS and JS files
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Allow crawling of pages
+Allow: /pages/
+
+# Crawl-delay (be nice to our "unreliable" servers)
+Crawl-delay: 1
+
+# Additional directives for better SEO
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
