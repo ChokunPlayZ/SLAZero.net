@@ -46,7 +46,7 @@ EXPOSE 80
 
 # Health check to ensure nginx is running
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost/ || exit 1
+  CMD curl -s -o /dev/null -w "%{http_code}" http://localhost || exit 1
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
