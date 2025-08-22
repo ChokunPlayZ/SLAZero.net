@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Primary SEO Meta Tags -->
     <title>SLAZero.net - 99.999% Guaranteed Downtime | Unreliable Web Hosting</title>
@@ -88,13 +88,16 @@
                 <div class="logo">
                     <span class="logo-text" title="This cloud leaks">☁️ SLAZero.net</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" title="Might not work" data-i18n="nav.home">Home</a></li>
-                    <li><a href="#features" title="Features that don't work" data-i18n="nav.features">Features</a></li>
-                    <li><a href="#status" title="Spoiler: It's down" data-i18n="nav.status">Status</a></li>
-                    <li><a href="#pricing" title="Pay for nothing" data-i18n="nav.pricing">Pricing</a></li>
-                    <li><a href="#contact" title="We won't respond" data-i18n="nav.contact">Contact</a></li>
-                    <li><a href="pages/blog.html" title="More lies" data-i18n="nav.blog">Blog</a></li>
+                <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-icon">☰</span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" title="Might not work" data-i18n="nav.home" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#features" title="Features that don't work" data-i18n="nav.features" onclick="closeMobileMenu()">Features</a></li>
+                    <li><a href="#status" title="Spoiler: It's down" data-i18n="nav.status" onclick="closeMobileMenu()">Status</a></li>
+                    <li><a href="#pricing" title="Pay for nothing" data-i18n="nav.pricing" onclick="closeMobileMenu()">Pricing</a></li>
+                    <li><a href="#contact" title="We won't respond" data-i18n="nav.contact" onclick="closeMobileMenu()">Contact</a></li>
+                    <li><a href="pages/blog.html" title="More lies" data-i18n="nav.blog" onclick="closeMobileMenu()">Blog</a></li>
                     <li class="language-selector">
                         <select id="language-select" onchange="changeLanguage(this.value)">
                             <option value="en">🇺🇸 EN</option>

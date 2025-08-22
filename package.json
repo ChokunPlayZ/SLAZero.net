@@ -1,0 +1,25 @@
+{
+  "name": "slazero-net",
+  "version": "1.0.0",
+  "description": "SLAZero.net - The World's Most Honest Hosting Service",
+  "scripts": {
+    "build": "node build.js",
+    "minify:css": "cleancss -o dist/assets/css/styles.min.css src/assets/css/styles.css",
+    "minify:js": "uglifyjs src/assets/js/*.js -o dist/assets/js/scripts.min.js --compress --mangle",
+    "minify:html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true -o"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "html-minifier": "^4.0.0",
+    "fs-extra": "^11.1.1"
+  },
+  "keywords": [
+    "hosting",
+    "parody",
+    "downtime",
+    "sla-zero"
+  ],
+  "author": "SLAZero.net",
+  "license": "MIT"
+}

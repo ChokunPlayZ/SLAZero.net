@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Primary SEO Meta Tags -->
     <title>Blog - SLAZero.net | Stories of Guaranteed Downtime and Server Disasters</title>
@@ -76,13 +76,16 @@
                 <div class="logo">
                     <a href="../index.html" class="logo-text" title="Back to disappointment">☁️ SLAZero.net</a>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#features">Features</a></li>
-                    <li><a href="../index.html#status">Status</a></li>
-                    <li><a href="../index.html#pricing">Pricing</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                    <li><a href="blog.html" style="color: var(--primary-color);">Blog</a></li>
+                <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <span class="nav-toggle-icon">☰</span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="../index.html#features" onclick="closeMobileMenu()">Features</a></li>
+                    <li><a href="../index.html#status" onclick="closeMobileMenu()">Status</a></li>
+                    <li><a href="../index.html#pricing" onclick="closeMobileMenu()">Pricing</a></li>
+                    <li><a href="../index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+                    <li><a href="blog.html" style="color: var(--primary-color);" onclick="closeMobileMenu()">Blog</a></li>
                     <li class="language-selector">
                         <select id="language-select" onchange="changeLanguage(this.value)">
                             <option value="en">🇺🇸 EN</option>

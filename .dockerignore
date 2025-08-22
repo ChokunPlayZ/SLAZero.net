@@ -1,9 +1,46 @@
-# Ignore files that shouldn't be in the Docker image
+# Exclude unnecessary files from Docker build context
 .git
 .gitignore
-node_modules
-npm-debug.log
 README.md
-Dockerfile
+docs/
+
+# Exclude development files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Exclude temporary and build files
+dist/
+temp/
+*.tmp
+*.temp
+
+# Exclude Docker files (we need Dockerfile but not compose files in build context)
 docker-compose.yml
-.dockerignore
+docker-compose.override.yml
+
+# Exclude IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Exclude OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Exclude log files
+*.log
+logs/
+
+# Keep only necessary files for build
+# src/ - source files (needed)
+# package.json - dependencies (needed)
+# build.js - build script (needed)
+# docker/ - nginx config (needed)

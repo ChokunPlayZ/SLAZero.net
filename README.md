@@ -20,12 +20,21 @@ Welcome to SLAZero.net, where we guarantee 99.999% downtime and deliver on our p
 
 ### Option 2: Manual Docker commands
 ```bash
-# Build and run with docker-compose
+# Build and run with docker-compose (includes auto-minification)
 docker-compose up -d
 
-# Or build and run manually
+# Or build and run manually (also includes auto-minification)
 docker build -t slazero-net .
 docker run -p 8080:80 slazero-net
+```
+
+### Option 3: Local minified build (for testing)
+```bash
+# Build minified version locally
+./build-local.sh
+
+# Test the minified version
+cd dist && python3 -m http.server 8000
 ```
 
 ### Option 3: Local development
@@ -56,9 +65,11 @@ SLAZero.net/
 └── README.md          # This file
 ```
 
-## 🎨 New Features
+## 🎨 Features
 
 - **🌙 Dark Mode**: Toggle between light and dark themes
+- **📱 Mobile Optimized**: Fully responsive design with hamburger menu
+- **⚡ Auto-Minification**: CSS, JavaScript, and HTML are automatically minified during Docker builds
 - **⚡ Firefox Flashbang**: Special surprise for Firefox users switching to dark mode
 - **🔄 Dynamic Hero Text**: Hero messages rotate every 4 seconds
 - **🌍 Multi-Language Support**: Available in English, Thai, and Japanese

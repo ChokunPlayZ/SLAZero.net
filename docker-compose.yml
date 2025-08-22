@@ -1,6 +1,10 @@
 services:
   slazero-web:
-    build: .
+    build: 
+      context: .
+      args:
+        - BUILD_DATE=${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        - VERSION=${VERSION:-1.0.0}
     container_name: slazero-website
     ports:
       - "8080:80"
@@ -8,8 +12,9 @@ services:
     environment:
       - NGINX_ENTRYPOINT_QUIET_LOGS=1
     labels:
-      - "com.slazero.description=The world's most honest hosting service"
+      - "com.slazero.description=The world's most honest hosting service (minified)"
       - "com.slazero.uptime=0.001%"
+      - "com.slazero.build=minified"
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s

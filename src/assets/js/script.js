@@ -332,3 +332,76 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Mobile menu functions
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    navMenu.classList.toggle('active');
+    
+    // Update hamburger icon
+    const icon = navToggle.querySelector('.nav-toggle-icon');
+    if (navMenu.classList.contains('active')) {
+        icon.textContent = '✕';
+    } else {
+        icon.textContent = '☰';
+    }
+}
+
+function closeMobileMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    navMenu.classList.remove('active');
+    
+    // Reset hamburger icon
+    const icon = navToggle.querySelector('.nav-toggle-icon');
+    icon.textContent = '☰';
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (navMenu && navMenu.classList.contains('active')) {
+        if (!navContainer.contains(event.target)) {
+            closeMobileMenu();
+        }
+    }
+});
+
+// Close mobile menu on window resize if screen becomes large
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMobileMenu();
+    }
+});
+
+// Improve touch interactions for mobile
+document.addEventListener('DOMContentLoaded', function() {
+    // Add touch feedback to buttons
+    const buttons = document.querySelectorAll('button, .cta-primary, .cta-secondary');
+    
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        button.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+    
+    // Prevent double-tap zoom on buttons
+    buttons.forEach(button => {
+        button.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            this.click();
+        });
+    });
+});
