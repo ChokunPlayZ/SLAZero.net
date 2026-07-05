@@ -268,7 +268,7 @@ header {
     min-height: 90vh;
     display: flex;
     align-items: center;
-    padding: 6rem 2rem 4rem;
+    padding: 6rem 0 4rem;
     background: var(--gradient-hero);
     position: relative;
     overflow: hidden;
@@ -297,8 +297,6 @@ header {
 }
 
 .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
@@ -1122,7 +1120,7 @@ header {
 footer {
     background: var(--bg-app);
     color: var(--text-secondary);
-    padding: 5rem 2rem 2.5rem;
+    padding: 5rem 0 2.5rem;
     border-top: 1px solid var(--border-color);
 }
 
@@ -1372,6 +1370,12 @@ footer {
     
     .language-selector select {
         width: 100%;
+    }
+    
+    .hero {
+        min-height: 80vh;
+        margin-top: 70px;
+        padding: 2rem 0;
     }
     
     .hero-content {
