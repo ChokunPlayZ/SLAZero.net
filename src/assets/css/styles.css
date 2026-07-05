@@ -479,7 +479,6 @@ header {
 /* Features Section */
 .features {
     padding: 7rem 0;
-    background-color: var(--bg-surface);
     position: relative;
 }
 
@@ -606,8 +605,6 @@ header {
 /* Status Dashboard Section */
 .status-section {
     padding: 7rem 0;
-    background: var(--gradient-status);
-    color: #ffffff;
     position: relative;
 }
 
@@ -615,17 +612,15 @@ header {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: #ffffff;
 }
 
 .status-dashboard {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--gradient-status);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 3rem 2rem;
     border-radius: 24px;
     box-shadow: var(--shadow-lg);
+    color: #ffffff;
 }
 
 .status-indicator {
@@ -722,7 +717,6 @@ header {
 /* Pricing Section */
 .pricing {
     padding: 7rem 0;
-    background-color: var(--bg-app);
 }
 
 .pricing h2 {
@@ -911,7 +905,6 @@ header {
 /* Testimonials Section */
 .testimonials {
     padding: 7rem 0;
-    background-color: var(--bg-surface);
     border-top: 1px solid var(--border-color);
 }
 
@@ -976,8 +969,6 @@ header {
 /* Contact Section */
 .contact {
     padding: 7rem 0;
-    background: var(--gradient-contact);
-    color: #ffffff;
     position: relative;
 }
 
@@ -985,7 +976,6 @@ header {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 4rem;
-    color: #ffffff;
 }
 
 .contact-content {
@@ -998,10 +988,10 @@ header {
 }
 
 .contact-form {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-surface-glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-glass);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
@@ -1017,19 +1007,18 @@ header {
     margin-bottom: 0.5rem;
     font-weight: 500;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 0.875rem 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-    backdrop-filter: blur(5px);
+    background: var(--bg-app);
+    color: var(--text-primary);
     transition: all 0.25s ease;
     font-family: inherit;
     min-height: 48px;
@@ -1038,10 +1027,9 @@ header {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
     outline: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.15);
 }
 
 .form-group textarea {
@@ -1051,14 +1039,15 @@ header {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-secondary);
+    opacity: 0.6;
 }
 
 .submit-btn {
     width: 100%;
     padding: 0.875rem;
-    background: #ffffff;
-    color: var(--primary);
+    background: var(--primary);
+    color: #ffffff;
     border: none;
     border-radius: 12px;
     font-size: 1.05rem;
@@ -1072,16 +1061,16 @@ header {
 }
 
 .submit-btn:hover {
-    background: var(--bg-app);
+    background: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-surface-glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-glass);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
@@ -1090,7 +1079,7 @@ header {
 
 .contact-info h3 {
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 1.5rem;
 }
 
@@ -1106,13 +1095,13 @@ header {
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
 }
 
 .contact-info-icon {
     width: 24px;
     height: 24px;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--primary);
     flex-shrink: 0;
 }
 
