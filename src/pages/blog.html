@@ -65,8 +65,10 @@
     }
     </script>
     
-    <link rel="preload" href="../assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggOEwyNCAyNCIgc3Ryb2tlPSJyZWQiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjQgOEw4IDI0IiBzdHJva2U9InJlZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=">
 </head>
 <body>
     <!-- Header -->
@@ -74,10 +76,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <a href="../index.html" class="logo-text" title="Back to disappointment">☁️ SLAZero.net</a>
+                    <a href="../index.html" class="logo-text" title="Back to disappointment">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19A3.5 3.5 0 0 0 21 15.5c0-2.79-2.54-4.5-5-4.5-.47 0-.89.09-1.3.27A6 6 0 0 0 4 15.5C4 17.43 5.57 19 7.5 19h10z"/></svg>
+                        SLAZero.net
+                    </a>
                 </div>
                 <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
-                    <span class="nav-toggle-icon">☰</span>
+                    <!-- Set by JS dynamically -->
                 </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="../index.html" onclick="closeMobileMenu()">Home</a></li>
@@ -85,15 +90,15 @@
                     <li><a href="../index.html#status" onclick="closeMobileMenu()">Status</a></li>
                     <li><a href="../index.html#pricing" onclick="closeMobileMenu()">Pricing</a></li>
                     <li><a href="../index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
-                    <li><a href="blog.html" style="color: var(--primary-color);" onclick="closeMobileMenu()">Blog</a></li>
+                    <li><a href="blog.html" style="color: var(--primary);" onclick="closeMobileMenu()">Blog</a></li>
                     <li class="language-selector">
                         <select id="language-select" onchange="changeLanguage(this.value)">
-                            <option value="en">🇺🇸 EN</option>
-                            <option value="th">🇹🇭 TH</option>
-                            <option value="ja">🇯🇵 JP</option>
+                            <option value="en">EN</option>
+                            <option value="th">TH</option>
+                            <option value="ja">JP</option>
                         </select>
                     </li>
-                    <li><button id="theme-toggle" title="Enter the void">🌙</button></li>
+                    <li><button id="theme-toggle" title="Enter the void"></button></li>
                 </ul>
             </div>
         </nav>
@@ -101,11 +106,11 @@
 
     <!-- Blog Hero -->
     <main>
-        <section class="hero" style="min-height: 50vh;">
+        <section class="hero" style="min-height: 40vh; padding-top: 8rem;">
             <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
-                <div class="hero-text">
-                    <h1 class="hero-title" style="font-size: 2.5rem;">SLAZero Blog 📝</h1>
-                    <p class="hero-subtitle">Sharing our expertise in professional failure</p>
+                <div class="hero-text" style="align-items: center; justify-content: center; width: 100%;">
+                    <h1 class="hero-title" style="font-size: 3rem; min-height: auto; margin-bottom: 0.5rem;">SLAZero Blog</h1>
+                    <p class="hero-subtitle" style="min-height: auto; margin-bottom: 0;">Sharing our expertise in professional failure</p>
                 </div>
             </div>
         </section>
@@ -120,172 +125,182 @@
                         <header class="post-header">
                             <h2 itemprop="headline">Top 10 Ways to Guarantee Downtime</h2>
                             <div class="post-meta">
-                                <time class="date" datetime="2025-03-32" itemprop="datePublished">📅 March 32, 2025</time>
+                                <time class="date" datetime="2025-03-32" itemprop="datePublished">
+                                    <!-- Date SVG injected by JS -->
+                                    March 32, 2025
+                                </time>
                                 <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                    👤 <span itemprop="name">Chief Failure Officer</span>
+                                    <!-- Author SVG injected by JS -->
+                                    <span itemprop="name">Chief Failure Officer</span>
                                 </span>
-                                <span class="read-time">⏱️ 5 min read (if the page loads)</span>
+                                <span class="read-time">
+                                    <!-- Timer SVG injected by JS -->
+                                    5 min read (if the page loads)
+                                </span>
                             </div>
                         </header>
                         <div class="post-content" itemprop="articleBody">
-                        <p>After years of perfecting the art of system failures, we're excited to share our top 10 proven methods for achieving maximum downtime:</p>
-                        
-                        <ol>
-                            <li><strong>Use Only One Server</strong> - Why have redundancy when you can have simplicity? Place all your eggs in one basket, then drop the basket.</li>
+                            <p>After years of perfecting the art of system failures, we're excited to share our top 10 proven methods for achieving maximum downtime:</p>
                             
-                            <li><strong>Never Update Security Patches</strong> - Those are just suggestions anyway. What's the worst that could happen?</li>
+                            <ol>
+                                <li><strong>Use Only One Server</strong> - Why have redundancy when you can have simplicity? Place all your eggs in one basket, then drop the basket.</li>
+                                <li><strong>Never Update Security Patches</strong> - Those are just suggestions anyway. What's the worst that could happen?</li>
+                                <li><strong>Deploy on Fridays</strong> - Especially at 4:59 PM. Weekend emergencies build character.</li>
+                                <li><strong>Ignore Monitoring Alerts</strong> - That constant beeping is probably just a false alarm. Probably.</li>
+                                <li><strong>Store Backups on the Same Server</strong> - It's convenient! Until it's not.</li>
+                                <li><strong>Use "password123" for Everything</strong> - Easy to remember, easier to hack.</li>
+                                <li><strong>Never Test Disaster Recovery</strong> - Testing is for pessimists. We prefer surprises.</li>
+                                <li><strong>Run Everything on the Cheapest Hardware</strong> - Budget constraints breed creativity! And downtime.</li>
+                                <li><strong>Skip Documentation</strong> - Real experts don't need manuals. Future you will figure it out.</li>
+                                <li><strong>Hire Only Interns for Critical Infrastructure</strong> - They're enthusiastic! What could go wrong?</li>
+                            </ol>
                             
-                            <li><strong>Deploy on Fridays</strong> - Especially at 4:59 PM. Weekend emergencies build character.</li>
+                            <p><em>Following these simple steps, you too can achieve our legendary 99.999% downtime guarantee!</em></p>
                             
-                            <li><strong>Ignore Monitoring Alerts</strong> - That constant beeping is probably just a false alarm. Probably.</li>
-                            
-                            <li><strong>Store Backups on the Same Server</strong> - It's convenient! Until it's not.</li>
-                            
-                            <li><strong>Use "password123" for Everything</strong> - Easy to remember, easier to hack.</li>
-                            
-                            <li><strong>Never Test Disaster Recovery</strong> - Testing is for pessimists. We prefer surprises.</li>
-                            
-                            <li><strong>Run Everything on the Cheapest Hardware</strong> - Budget constraints breed creativity! And downtime.</li>
-                            
-                            <li><strong>Skip Documentation</strong> - Real experts don't need manuals. Future you will figure it out.</li>
-                            
-                            <li><strong>Hire Only Interns for Critical Infrastructure</strong> - They're enthusiastic! What could go wrong?</li>
-                        </ol>
-                        
-                        <p><em>Following these simple steps, you too can achieve our legendary 99.999% downtime guarantee!</em></p>
-                        
-                        <div class="post-footer">
-                            <div class="tags">
-                                <span class="tag">downtime</span>
-                                <span class="tag">failure</span>
-                                <span class="tag">best-practices</span>
-                                <span class="tag">chaos-engineering</span>
-                            </div>
-                            <div class="social-share">
-                                <button onclick="alert('Share feature is down. As expected.')">📤 Share (Broken)</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Blog Post 2 -->
-                <article class="blog-post">
-                    <div class="post-header">
-                        <h2>Why Our SLA is Zero... and Proud of It</h2>
-                        <div class="post-meta">
-                            <span class="date">📅 February 30, 2025</span>
-                            <span class="author">👤 Director of Disappointment</span>
-                            <span class="read-time">⏱️ 3 min read (possibly)</span>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p>In a world obsessed with "five nines" uptime and reliability, SLAZero.net dares to be different. Here's why having zero SLA is actually genius:</p>
-                        
-                        <h3>🎯 No Expectations = No Disappointment</h3>
-                        <p>By promising nothing, we can only exceed expectations. When our service works for even 0.001% of the time, customers are pleasantly surprised!</p>
-                        
-                        <h3>💰 Cost Effective</h3>
-                        <p>Why spend millions on redundant infrastructure when you can spend dozens on a single server from 2003? Our operating costs are practically zero!</p>
-                        
-                        <h3>🧘 Stress-Free Operations</h3>
-                        <p>No pressure to maintain uptime means our engineers can focus on what really matters: playing video games and taking long lunches.</p>
-                        
-                        <h3>🌱 Environmentally Friendly</h3>
-                        <p>When your servers are down, they consume less electricity! We're basically saving the planet, one outage at a time.</p>
-                        
-                        <h3>🎨 Creative Problem Solving</h3>
-                        <p>Our customers develop incredible patience and creative workarounds. We're basically a character-building service!</p>
-                        
-                        <blockquote>
-                            "Traditional companies promise 99.9% uptime and deliver 99.8%. We promise 0% uptime and deliver 0.001%. We're literally 1000% better than our promises!" - Our Marketing Team (probably fired)
-                        </blockquote>
-                        
-                        <p>Remember: In a world of broken promises, we're the only ones being honest about our capabilities.</p>
-                        
-                        <div class="post-footer">
-                            <div class="tags">
-                                <span class="tag">sla</span>
-                                <span class="tag">honesty</span>
-                                <span class="tag">transparency</span>
-                                <span class="tag">zero</span>
-                            </div>
-                            <div class="social-share">
-                                <button onclick="alert('Social media is down. Try smoke signals.')">🐦 Tweet (404)</button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Blog Post 3 -->
-                <article class="blog-post">
-                    <div class="post-header">
-                        <h2>The Art of Professional Apologies</h2>
-                        <div class="post-meta">
-                            <span class="date">📅 January 35, 2025</span>
-                            <span class="author">👤 Chief Apology Writer</span>
-                            <span class="read-time">⏱️ 2 min read (if you're lucky)</span>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <p>At SLAZero.net, we've mastered the art of the professional apology. Here are our tried-and-tested templates:</p>
-                        
-                        <div class="apology-templates">
-                            <div class="template">
-                                <h4>🔥 The "Everything is Fire" Template</h4>
-                                <div class="template-text">
-                                    <p><em>"We're experiencing some technical difficulties. By 'some,' we mean all of them. By 'technical,' we mean everything. By 'difficulties,' we mean absolute catastrophic failure. We're sorry for any inconvenience, which is definitely significant."</em></p>
+                            <div class="post-footer">
+                                <div class="tags">
+                                    <span class="tag">downtime</span>
+                                    <span class="tag">failure</span>
+                                    <span class="tag">best-practices</span>
+                                    <span class="tag">chaos-engineering</span>
                                 </div>
-                            </div>
-                            
-                            <div class="template">
-                                <h4>🤷‍♂️ The "Mystery Problem" Template</h4>
-                                <div class="template-text">
-                                    <p><em>"We've identified the issue: something somewhere is broken somehow. Our team of experts is investigating, which mostly involves staring at screens and sighing heavily. ETA for resolution: ¯\_(ツ)_/¯"</em></p>
-                                </div>
-                            </div>
-                            
-                            <div class="template">
-                                <h4> The "Fake Progress" Template</h4>
-                                <div class="template-text">
-                                    <p><em>"We're making steady progress on the issue. We've identified 47 potential causes and eliminated 0 of them. Our confidence level is at an all-time high of 3%. Stay tuned for updates that may or may not be accurate."</em></p>
+                                <div class="social-share">
+                                    <button onclick="alert('Share feature is down. As expected.')">
+                                        <svg class="post-meta-icon" style="vertical-align: middle; margin-right: 4px; display: inline-block; width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                        Share (Broken)
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        
-                        <p><strong>Pro Tip:</strong> Always include a vague timestamp like "soon" or "eventually" to manage expectations.</p>
-                        
-                        <div class="post-footer">
-                            <div class="tags">
-                                <span class="tag">apologies</span>
-                                <span class="tag">communication</span>
-                                <span class="tag">templates</span>
-                                <span class="tag">pr-disasters</span>
-                            </div>
-                            <div class="social-share">
-                                <button onclick="alert('Sharing failed successfully!')">💬 Share Your Favorite Excuse</button>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog-post">
+                        <div class="post-header">
+                            <h2>Why Our SLA is Zero... and Proud of It</h2>
+                            <div class="post-meta">
+                                <span class="date">February 30, 2025</span>
+                                <span class="author">Director of Disappointment</span>
+                                <span class="read-time">3 min read (possibly)</span>
                             </div>
                         </div>
-                    </div>
-                </article>
+                        <div class="post-content">
+                            <p>In a world obsessed with "five nines" uptime and reliability, SLAZero.net dares to be different. Here's why having zero SLA is actually genius:</p>
+                            
+                            <h3>No Expectations = No Disappointment</h3>
+                            <p>By promising nothing, we can only exceed expectations. When our service works for even 0.001% of the time, customers are pleasantly surprised!</p>
+                            
+                            <h3>Cost Effective</h3>
+                            <p>Why spend millions on redundant infrastructure when you can spend dozens on a single server from 2003? Our operating costs are practically zero!</p>
+                            
+                            <h3>Stress-Free Operations</h3>
+                            <p>No pressure to maintain uptime means our engineers can focus on what really matters: playing video games and taking long lunches.</p>
+                            
+                            <h3>Environmentally Friendly</h3>
+                            <p>When your servers are down, they consume less electricity! We're basically saving the planet, one outage at a time.</p>
+                            
+                            <h3>Creative Problem Solving</h3>
+                            <p>Our customers develop incredible patience and creative workarounds. We're basically a character-building service!</p>
+                            
+                            <blockquote>
+                                "Traditional companies promise 99.9% uptime and deliver 99.8%. We promise 0% uptime and deliver 0.001%. We're literally 1000% better than our promises!" - Our Marketing Team (probably fired)
+                            </blockquote>
+                            
+                            <p>Remember: In a world of broken promises, we're the only ones being honest about our capabilities.</p>
+                            
+                            <div class="post-footer">
+                                <div class="tags">
+                                    <span class="tag">sla</span>
+                                    <span class="tag">honesty</span>
+                                    <span class="tag">transparency</span>
+                                    <span class="tag">zero</span>
+                                </div>
+                                <div class="social-share">
+                                    <button onclick="alert('Social media is down. Try smoke signals.')">
+                                        <svg class="post-meta-icon" style="vertical-align: middle; margin-right: 4px; display: inline-block; width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                                        Tweet (404)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-            </div>
-        </div>
-    </section>
+                    <!-- Blog Post 3 -->
+                    <article class="blog-post">
+                        <div class="post-header">
+                            <h2>The Art of Professional Apologies</h2>
+                            <div class="post-meta">
+                                <span class="date">January 35, 2025</span>
+                                <span class="author">Chief Apology Writer</span>
+                                <span class="read-time">2 min read (if you're lucky)</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>At SLAZero.net, we've mastered the art of the professional apology. Here are our tried-and-tested templates:</p>
+                            
+                            <div class="apology-templates">
+                                <div class="template">
+                                    <h4>The "Everything is Fire" Template</h4>
+                                    <div class="template-text">
+                                        <p><em>"We're experiencing some technical difficulties. By 'some,' we mean all of them. By 'technical,' we mean everything. By 'difficulties,' we mean absolute catastrophic failure. We're sorry for any inconvenience, which is definitely significant."</em></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="template">
+                                    <h4>The "Mystery Problem" Template</h4>
+                                    <div class="template-text">
+                                        <p><em>"We've identified the issue: something somewhere is broken somehow. Our team of experts is investigating, which mostly involves staring at screens and sighing heavily. ETA for resolution: ¯\_(ツ)_/¯"</em></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="template">
+                                    <h4>The "Fake Progress" Template</h4>
+                                    <div class="template-text">
+                                        <p><em>"We're making steady progress on the issue. We've identified 47 potential causes and eliminated 0 of them. Our confidence level is at an all-time high of 3%. Stay tuned for updates that may or may not be accurate."</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p><strong>Pro Tip:</strong> Always include a vague timestamp like "soon" or "eventually" to manage expectations.</p>
+                            
+                            <div class="post-footer">
+                                <div class="tags">
+                                    <span class="tag">apologies</span>
+                                    <span class="tag">communication</span>
+                                    <span class="tag">templates</span>
+                                    <span class="tag">pr-disasters</span>
+                                </div>
+                                <div class="social-share">
+                                    <button onclick="alert('Sharing failed successfully!')">
+                                        <svg class="post-meta-icon" style="vertical-align: middle; margin-right: 4px; display: inline-block; width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                        Share Your Favorite Excuse
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span class="logo-text">☁️ SLAZero.net</span>
-                    <p>Disappointing readers since 2025</p>
-                </div>
-                <div class="footer-right">
-                    <p>&copy; 2025 SLAZero.net Blog. All posts subject to availability. Content may disappear without notice.</p>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-text">
+                            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19A3.5 3.5 0 0 0 21 15.5c0-2.79-2.54-4.5-5-4.5-.47 0-.89.09-1.3.27A6 6 0 0 0 4 15.5C4 17.43 5.57 19 7.5 19h10z"/></svg>
+                            SLAZero.net
+                        </span>
+                        <p class="footer-tagline">Disappointing readers since 2025</p>
+                    </div>
+                    <div class="footer-bottom" style="border: none; padding: 0;">
+                        <p>&copy; 2025 SLAZero.net Blog. All posts subject to availability. Content may disappear without notice.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="../assets/js/i18n.js"></script>

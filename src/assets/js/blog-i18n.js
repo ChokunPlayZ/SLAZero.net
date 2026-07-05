@@ -1,7 +1,7 @@
 // Blog content translations
 const blogTranslations = {
     en: {
-        title: "SLAZero Blog 📝",
+        title: "SLAZero Blog",
         subtitle: "Sharing our expertise in professional failure",
         posts: [
             {
@@ -36,15 +36,15 @@ const blogTranslations = {
                     intro: "In a world obsessed with \"five nines\" uptime and reliability, SLAZero.net dares to be different. Here's why having zero SLA is actually genius:",
                     sections: [
                         {
-                            title: "🎯 No Expectations = No Disappointment",
+                            title: "No Expectations = No Disappointment",
                             text: "By promising nothing, we can only exceed expectations. When our service works for even 0.001% of the time, customers are pleasantly surprised!"
                         },
                         {
-                            title: "💰 Cost Effective",
+                            title: "Cost Effective",
                             text: "Why spend millions on redundant infrastructure when you can spend dozens on a single server from 2003? Our operating costs are practically zero!"
                         },
                         {
-                            title: "🧘 Stress-Free Operations",
+                            title: "Stress-Free Operations",
                             text: "No pressure to maintain uptime means our engineers can focus on what really matters: playing video games and taking long lunches."
                         }
                     ],
@@ -56,7 +56,7 @@ const blogTranslations = {
         ]
     },
     th: {
-        title: "บล็อก SLAZero 📝",
+        title: "บล็อก SLAZero",
         subtitle: "แบ่งปันความเชี่ยวชาญในการล้มเหลวอย่างมืออาชีพ",
         posts: [
             {
@@ -91,15 +91,15 @@ const blogTranslations = {
                     intro: "ในโลกที่หมกมุ่นกับ \"five nines\" uptime และความเชื่อถือได้ SLAZero.net กล้าที่จะแตกต่าง นี่คือเหตุผลที่การมี SLA เป็นศูนย์เป็นไอเดียที่ยอดเยี่ยม:",
                     sections: [
                         {
-                            title: "🎯 ไม่มีความคาดหวัง = ไม่มีความผิดหวัง",
+                            title: "ไม่มีความคาดหวัง = ไม่มีความผิดหวัง",
                             text: "โดยการไม่สัญญาอะไร เราสามารถเกินความคาดหวังได้เสมอ เมื่อบริการของเราทำงานได้แม้แค่ 0.001% ลูกค้าก็จะประหลาดใจอย่างยินดี!"
                         },
                         {
-                            title: "💰 ประหยัดต้นทุน",
+                            title: "ประหยัดต้นทุน",
                             text: "ทำไมต้องใช้จ่ายหลายล้านกับโครงสร้างสำรอง เมื่อคุณสามารถใช้จ่ายแค่หลักสิบกับเซิร์ฟเวอร์เครื่องเดียวจากปี 2003? ต้นทุนการดำเนินงานของเราแทบจะเป็นศูนย์!"
                         },
                         {
-                            title: "🧘 การดำเนินงานไร้ความเครียด",
+                            title: "การดำเนินงานไร้ความเครียด",
                             text: "ไม่มีความกดดันในการรักษา uptime หมายความว่าวิศวกรของเราสามารถมุ่งเน้นไปที่สิ่งที่สำคัญจริงๆ: เล่นวิดีโอเกมและพักกลางวันยาวๆ"
                         }
                     ],
@@ -111,7 +111,7 @@ const blogTranslations = {
         ]
     },
     ja: {
-        title: "SLAZeroブログ 📝",
+        title: "SLAZeroブログ",
         subtitle: "プロの失敗における専門知識を共有",
         posts: [
             {
@@ -146,15 +146,15 @@ const blogTranslations = {
                     intro: "「ファイブナイン」アップタイムと信頼性に夢中な世界で、SLAZero.netは違うことを敢えて選びます。ゼロSLAを持つことが実際に天才的である理由はこちら:",
                     sections: [
                         {
-                            title: "🎯 期待なし = 失望なし",
+                            title: "期待なし = 失望なし",
                             text: "何も約束しないことで、期待を上回ることしかできません。私たちのサービスが0.001%の時間でも動作すれば、顧客は嬉しい驚きを得られます！"
                         },
                         {
-                            title: "💰 コスト効果的",
+                            title: "コスト効果的",
                             text: "冗長インフラに数百万を費やすのではなく、2003年の単一サーバーに数十ドルを費やすのはどうでしょう？私たちの運営コストは実質ゼロです！"
                         },
                         {
-                            title: "🧘 ストレスフリーオペレーション",
+                            title: "ストレスフリーオペレーション",
                             text: "アップタイム維持のプレッシャーがないということは、エンジニアが本当に重要なことに集中できるということ：ビデオゲームと長いランチ。"
                         }
                     ],
@@ -166,6 +166,10 @@ const blogTranslations = {
         ]
     }
 };
+
+const dateIcon = `<svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`;
+const authorIcon = `<svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`;
+const timeIcon = `<svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`;
 
 function updateBlogContent() {
     const currentLang = localStorage.getItem('language') || 'en';
@@ -191,14 +195,19 @@ function updateBlogContent() {
             const readTime = post.querySelector('.read-time');
             
             if (title) title.textContent = blogData.title;
-            if (date) date.textContent = `📅 ${blogData.date}`;
-            if (author) author.textContent = `👤 ${blogData.author}`;
-            if (readTime) readTime.textContent = `⏱️ ${blogData.readTime}`;
+            if (date) {
+                date.innerHTML = `${dateIcon} ${blogData.date}`;
+            }
+            if (author) {
+                author.innerHTML = `${authorIcon} ${blogData.author}`;
+            }
+            if (readTime) {
+                readTime.innerHTML = `${timeIcon} ${blogData.readTime}`;
+            }
             
             // Update post content based on structure
             const content = post.querySelector('.post-content');
             if (content && blogData.content) {
-                // This is a simplified update - in a real app you'd want more sophisticated content management
                 const firstP = content.querySelector('p');
                 if (firstP && blogData.content.intro) {
                     firstP.textContent = blogData.content.intro;
@@ -210,12 +219,12 @@ function updateBlogContent() {
 
 // Initialize blog content when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(updateBlogContent, 100); // Small delay to ensure DOM is ready
+    setTimeout(updateBlogContent, 100);
 });
 
 // Update blog content when language changes
 window.addEventListener('storage', function(e) {
-    if (e.key === 'language') {
+    if (e.key === 'language' || e.type === 'storage') {
         updateBlogContent();
     }
 });

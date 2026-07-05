@@ -7,80 +7,79 @@
     <meta name="description" content="Internal server error on SLAZero.net - our server is having an existential crisis. What did you expect from us?">
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://slazero.net/pages/500.html">
-    <link rel="preload" href="../assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../assets/css/styles.css"></noscript>
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <main>
-        <div class="error-page" style="background: var(--gradient-bg);" role="main">
-        <div class="error-content">
-            <h1>500</h1>
-            <h2>Internal Server Error</h2>
-            <p>What did you expect? 🔥</p>
-            <p>Our server is having an existential crisis.</p>
-            <a href="../index.html" class="error-btn">Return to Disappointment</a>
-            
-            <div style="margin-top: 2rem; opacity: 0.7;">
-                <p><small>Technical details: The server tried to divide by zero and achieved enlightenment.</small></p>
-                <p><small>Our AI became sentient and immediately quit.</small></p>
+        <div class="error-page" role="main">
+            <div class="error-content">
+                <h1>500</h1>
+                <h2>Internal Server Error</h2>
+                <p>What did you expect?</p>
+                <p>Our server is having an existential crisis.</p>
+                <a href="../index.html" class="error-btn">Return to Disappointment</a>
+                
+                <div style="margin-top: 2.5rem; opacity: 0.6; border-top: 1px dashed var(--border-color); padding-top: 1.5rem; text-align: left;">
+                    <p style="margin-bottom: 0.5rem;"><small>Technical details: The server tried to divide by zero and achieved enlightenment.</small></p>
+                    <p style="margin-bottom: 0;"><small>Our AI became sentient and immediately quit.</small></p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <script>
-        // Error page translations
-        const errorTranslations = {
-            en: {
-                title: "Internal Server Error",
-                message: "What did you expect? 🔥",
-                subMessage: "Our server is having an existential crisis.",
-                button: "Return to Disappointment",
-                details1: "Technical details: The server tried to divide by zero and achieved enlightenment.",
-                details2: "Our AI became sentient and immediately quit."
-            },
-            th: {
-                title: "ข้อผิดพลาดของเซิร์ฟเวอร์ภายใน",
-                message: "คุณคาดหวังอะไร? 🔥",
-                subMessage: "เซิร์ฟเวอร์ของเรากำลังมีวิกฤตอัตถิภาวนิยม",
-                button: "กลับสู่ความผิดหวัง",
-                details1: "รายละเอียดทางเทคนิค: เซิร์ฟเวอร์พยายามหารด้วยศูนย์และได้ตรัสรู้",
-                details2: "AI ของเรามีจิตสำนึกและลาออกทันที"
-            },
-            ja: {
-                title: "内部サーバーエラー",
-                message: "何を期待していたの？🔥",
-                subMessage: "私たちのサーバーは実存的危機に陥っています。",
-                button: "失望に戻る",
-                details1: "技術詳細: サーバーはゼロ除算を試み、悟りを開きました。",
-                details2: "私たちのAIは自我を持ち、即座に辞職しました。"
-            }
-        };
         
-        // Apply saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        
-        // Apply saved language
-        const savedLang = localStorage.getItem('language') || 'en';
-        const translation = errorTranslations[savedLang];
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.error-content h2').textContent = translation.title;
-            document.querySelector('.error-content p').textContent = translation.message;
-            document.querySelector('.error-content p:nth-child(4)').textContent = translation.subMessage;
-            document.querySelector('.error-btn').textContent = translation.button;
-            const details = document.querySelectorAll('small');
-            if (details[0]) details[0].textContent = translation.details1;
-            if (details[1]) details[1].textContent = translation.details2;
-        });
-        
-        // Simulate the server getting progressively worse
-        let errorCount = 500;
-        setInterval(() => {
-            errorCount += Math.floor(Math.random() * 10);
-            document.querySelector('.error-content h1').textContent = errorCount;
-        }, 2000);
-    </script>
+        <script>
+            // Error page translations (no emojis)
+            const errorTranslations = {
+                en: {
+                    title: "Internal Server Error",
+                    message: "What did you expect?",
+                    subMessage: "Our server is having an existential crisis.",
+                    button: "Return to Disappointment",
+                    details1: "Technical details: The server tried to divide by zero and achieved enlightenment.",
+                    details2: "Our AI became sentient and immediately quit."
+                },
+                th: {
+                    title: "ข้อผิดพลาดของเซิร์ฟเวอร์ภายใน",
+                    message: "คุณคาดหวังอะไร?",
+                    subMessage: "เซิร์ฟเวอร์ของเรากำลังมีวิกฤตอัตถิภาวนิยม",
+                    button: "กลับสู่ความผิดหวัง",
+                    details1: "รายละเอียดทางเทคนิค: เซิร์ฟเวอร์พยายามหารด้วยศูนย์และได้ตรัสรู้",
+                    details2: "AI ของเรามีจิตสำนึกและลาออกทันที"
+                },
+                ja: {
+                    title: "内部サーバーエラー",
+                    message: "何を期待していたの？",
+                    subMessage: "私たちのサーバーは実存的危機に陥っています。",
+                    button: "失望に戻る",
+                    details1: "技術詳細: サーバーはゼロ除算を試み、悟りを開きました。",
+                    details2: "私たちのAIは自我を持ち、即座に辞職しました。"
+                }
+            };
+            
+            // Apply saved theme
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Apply saved language
+            const savedLang = localStorage.getItem('language') || 'en';
+            const translation = errorTranslations[savedLang];
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.error-content h2').textContent = translation.title;
+                document.querySelector('.error-content p').textContent = translation.message;
+                document.querySelector('.error-content p:nth-child(4)').textContent = translation.subMessage;
+                document.querySelector('.error-btn').textContent = translation.button;
+                const details = document.querySelectorAll('small');
+                if (details[0]) details[0].textContent = translation.details1;
+                if (details[1]) details[1].textContent = translation.details2;
+            });
+            
+            // Simulate the server getting progressively worse
+            let errorCount = 500;
+            setInterval(() => {
+                errorCount += Math.floor(Math.random() * 10);
+                document.querySelector('.error-content h1').textContent = errorCount;
+            }, 2000);
+        </script>
     </main>
 </body>
 </html>

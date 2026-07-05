@@ -9,12 +9,12 @@ let heroTitles = [
 ];
 
 let heroSubtitles = [
-    "Your packets may arrive… or not. Who knows? 🤷‍♂️",
-    "Reliability is overrated anyway ",
-    "We specialize in creative disasters 🔥",
-    "Your data is probably fine... somewhere 🌍",
-    "At least we're honest about it! 😅",
-    "Murphy's Law has nothing on us ⚡"
+    "Your packets may arrive… or not. Who knows?",
+    "Reliability is overrated anyway.",
+    "We specialize in creative disasters.",
+    "Your data is probably fine... somewhere.",
+    "At least we're honest about it!",
+    "Murphy's Law has nothing on us."
 ];
 
 let currentHeroIndex = 0;
@@ -113,6 +113,14 @@ function rotateStatus() {
 // Rotate status every 3 seconds
 setInterval(rotateStatus, 3000);
 
+// Sun & Moon SVGs for theme toggle (no emojis)
+const sunIcon = `<svg class="theme-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+const moonIcon = `<svg class="theme-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+// Hamburger & Close SVGs for mobile menu (no emojis)
+const hamburgerIcon = `<svg class="nav-toggle-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+const closeIcon = `<svg class="nav-toggle-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
 // Dark mode functionality
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
@@ -139,7 +147,7 @@ function initThemeToggle() {
 function updateThemeToggleIcon(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
-        themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        themeToggle.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
         themeToggle.title = theme === 'dark' ? 'Escape the void' : 'Enter the void';
     }
 }
@@ -159,9 +167,15 @@ document.addEventListener('DOMContentLoaded', function() {
     rotateStatus();
     rotateHeroText();
     
+    // Set initial hamburger menu
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle) {
+        navToggle.innerHTML = hamburgerIcon;
+    }
+    
     // Wait for translations to load then update content
     if (window.updatePageContent) {
-        updatePageContent();
+        window.updatePageContent();
     }
 });
 
@@ -183,7 +197,7 @@ function showAlert(type) {
 // Language change function
 function changeLanguage(lang) {
     if (window.setLanguage) {
-        setLanguage(lang);
+        window.setLanguage(lang);
         // Update language selector
         document.getElementById('language-select').value = lang;
     }
@@ -199,7 +213,7 @@ function initLanguageSelector() {
         
         // Set initial language
         if (window.setLanguage) {
-            setLanguage(savedLang);
+            window.setLanguage(savedLang);
         }
     }
 }
@@ -220,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate "processing"
             setTimeout(() => {
-                let message = "Thanks for contacting SLAZero.net. We can neither confirm nor deny your request. Have a nice day! 😊\n\n(Your message has been successfully ignored)";
+                let message = "Thanks for contacting SLAZero.net. We can neither confirm nor deny your request. Have a nice day!\n\n(Your message has been ignored successfully)";
                 if (window.t) {
                     message = t('alerts.contactSuccess');
                 }
@@ -284,7 +298,7 @@ function addGlitchEffect() {
         const glitchedText = originalText.replace(/./g, () => Math.random() < 0.3 ? String.fromCharCode(33 + Math.floor(Math.random() * 94)) : '');
         
         randomElement.textContent = glitchedText;
-        randomElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--danger-color');
+        randomElement.style.color = getComputedStyle(document.documentElement).getPropertyValue('--danger');
         
         setTimeout(() => {
             randomElement.textContent = originalText;
@@ -310,7 +324,7 @@ document.addEventListener('keydown', function(e) {
     if (konamiCode.length === konamiSequence.length && 
         konamiCode.every((code, index) => code === konamiSequence[index])) {
         
-        alert("🎉 Congratulations! You found the secret code!\n\nAs a reward, here's a 100% discount on our Enterprise plan!\n\n100% of $999 = $999\n\n(Math is hard when systems are down)");
+        alert("Congratulations! You found the secret code!\n\nAs a reward, here's a 100% discount on our Enterprise plan!\n\n100% of $999 = $999\n\n(Math is hard when systems are down)");
         konamiCode = [];
     }
 });
@@ -340,12 +354,10 @@ function toggleMobileMenu() {
     
     navMenu.classList.toggle('active');
     
-    // Update hamburger icon
-    const icon = navToggle.querySelector('.nav-toggle-icon');
     if (navMenu.classList.contains('active')) {
-        icon.textContent = '✕';
+        navToggle.innerHTML = closeIcon;
     } else {
-        icon.textContent = '☰';
+        navToggle.innerHTML = hamburgerIcon;
     }
 }
 
@@ -354,10 +366,9 @@ function closeMobileMenu() {
     const navToggle = document.querySelector('.nav-toggle');
     
     navMenu.classList.remove('active');
-    
-    // Reset hamburger icon
-    const icon = navToggle.querySelector('.nav-toggle-icon');
-    icon.textContent = '☰';
+    if (navToggle) {
+        navToggle.innerHTML = hamburgerIcon;
+    }
 }
 
 // Close mobile menu when clicking outside
@@ -387,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     buttons.forEach(button => {
         button.addEventListener('touchstart', function() {
-            this.style.transform = 'scale(0.95)';
+            this.style.transform = 'scale(0.97)';
         });
         
         button.addEventListener('touchend', function() {
